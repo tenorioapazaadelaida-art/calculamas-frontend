@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+:root {
+  --page: #f3f7f7;
+  --surface: #fefeff;
+  --ink: #3f484b;
+  --muted: #737d80;
+  --line: #dbe4e5;
+  --primary-soft: #e2f0f1;
+  --radius: 18px;
+  --shadow: 0 10px 35px rgba(69, 71, 69, 0.08);
+}
+body {
+  font-family: 'Manrope', sans-serif;
+  color: var(--ink);
+  background: var(--page);
+  min-width: 320px;
+  overflow-x: hidden;
+}
+.q-page {
+  background: var(--page);
+}
+.page-shell {
+  padding: 32px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.page-title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+.page-subtitle {
+  color: var(--muted);
+  margin-top: 4px;
+}
+.surface-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(35, 31, 84, 0.02);
+  background: var(--surface);
+}
+.soft-shadow {
+  box-shadow: var(--shadow);
+}
+.q-btn {
+  border-radius: 11px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.q-field--outlined .q-field__control {
+  border-radius: 12px;
+}
+.q-dialog__inner > .q-card {
+  border-radius: 22px;
+  max-width: calc(100vw - 32px);
+}
+.q-table__container {
+  max-width: 100%;
+}
+.q-table__middle {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.q-table th,
+.q-table td {
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.q-card__actions {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.q-table th {
+  color: #77809a;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.45px;
+}
+.q-table tbody td {
+  height: 58px;
+}
+.responsive-data-card {
+  height: 100%;
+  border-radius: 16px;
+  background: var(--surface);
+}
+
+@media (max-width: 1023px) {
+  .page-shell {
+    padding: 24px;
+  }
+
+  .q-dialog__inner > .q-card {
+    max-height: calc(100vh - 48px);
+    overflow: auto;
+  }
+
+  .q-table__middle {
+    width: 100%;
+  }
+
+  .q-table__grid-content {
+    padding: 8px;
+  }
+
+  .q-table__grid-item {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .q-page.q-pa-lg,
+  .q-page.q-pa-md {
+    padding: 16px !important;
+  }
+  .page-shell {
+    padding: 20px 16px;
+  }
+  .page-shell > .row.justify-between {
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .page-title {
+    font-size: 24px;
+  }
+  .q-dialog__inner {
+    padding: 12px;
+  }
+  .q-dialog__inner > .q-card {
+    max-width: calc(100vw - 24px);
+    max-height: calc(100vh - 24px);
+  }
+  .q-toolbar {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .q-toolbar__title {
+    min-width: 0;
+    font-size: 16px;
+  }
+  .page-shell > .row.justify-between > .q-gutter-sm {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .page-shell > .row.justify-between > .q-gutter-sm > .q-btn {
+    flex: 1 1 150px;
+    margin: 0;
+  }
+  .page-shell > .row.justify-between > .row.q-gutter-sm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .page-shell > .row.justify-between > .row.q-gutter-sm > .q-field {
+    width: 100% !important;
+    margin: 0;
+  }
+  .q-card__actions .q-btn {
+    min-height: 40px;
+  }
+  .q-card__actions {
+    padding: 10px 12px;
+  }
+  .q-table__grid-content {
+    padding: 4px;
+  }
+  .q-table__grid-item {
+    padding: 6px;
+  }
+  .q-field__control {
+    min-width: 0;
+  }
+
+  .q-table__bottom {
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 8px;
+  }
+
+  .q-table__bottom-item {
+    margin-right: 0;
+  }
+
+  .q-dialog__inner > .q-card .q-card__section.row {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .q-page.q-pa-lg,
+  .q-page.q-pa-md {
+    padding: 12px !important;
+  }
+  .page-shell {
+    padding: 16px 12px;
+  }
+  .page-title {
+    font-size: 21px;
+    line-height: 1.25;
+  }
+  .page-subtitle {
+    font-size: 13px;
+  }
+  .q-dialog__inner {
+    padding: 8px;
+  }
+  .q-dialog__inner > .q-card {
+    max-width: calc(100vw - 16px);
+    max-height: calc(100vh - 16px);
+    border-radius: 16px;
+  }
+  .q-card__section {
+    padding: 14px;
+  }
+  .q-card__actions {
+    padding: 12px;
+  }
+  .q-card__actions .q-btn {
+    flex: 1 1 120px;
+  }
+
+  .q-btn .q-btn__content {
+    white-space: normal;
+    text-align: center;
+  }
+}
