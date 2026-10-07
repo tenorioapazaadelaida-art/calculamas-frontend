@@ -19,7 +19,7 @@
             </div>
           </div>
         </div>
-        <q-space />
+        <AreaMenu class="q-ml-sm" /><q-space />
         <q-btn
           v-if="puedeVerNotificaciones"
           flat
@@ -52,7 +52,7 @@
                     Actividad reciente y alertas
                   </div>
                 </div>
-                <q-space />
+                <AreaMenu class="q-ml-sm" /><q-space />
                 <q-btn
                   v-if="notificaciones.some((item) => item.persistente && !item.leida)"
                   flat dense no-caps color="primary" label="Leer todas"
@@ -314,7 +314,7 @@
               Información de tu cuenta y negocio
             </div>
           </div>
-          <q-space />
+          <AreaMenu class="q-ml-sm" /><q-space />
           <q-btn flat round dense icon="close" aria-label="Cerrar" v-close-popup />
         </q-card-section>
         <q-separator />
@@ -369,6 +369,7 @@
   </q-layout>
 </template>
 <script setup>
+import AreaMenu from 'components/AreaMenu.vue'
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { auth } from 'src/services/auth'
