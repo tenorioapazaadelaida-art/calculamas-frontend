@@ -6,7 +6,7 @@
 
       <div class="visual-content">
         <div class="login-brand">
-          <CalculaLogo :size="58" />
+          <CalculaLogo :size="120" />
           <span class="brand-word">Calcula+</span>
         </div>
 
@@ -44,7 +44,7 @@
       <q-card class="login-card" flat>
         <q-card-section class="login-card__content">
           <div class="mobile-brand lt-md">
-            <CalculaLogo :size="50" />
+            <CalculaLogo :size="120" />
             <span class="brand-word">Calcula+</span>
           </div>
 
